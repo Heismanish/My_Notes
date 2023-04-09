@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+	</head>
+	<body>
+		<!-- NAV -->
+		<nav
+			class="relative pl-10 pr-10 mx-auto flex items-center justify-between pt-5 gap-16"
+		>
+			<!-- Menu left -->
+			<div class="flex gap-16">
+				<!-- Logo -->
+				<div class="logo">
+					<img src="images/logo.svg" alt="logo" />
+				</div>
+
+				<!-- Menu left -->
+				<div class="space-x-16 hidden lg:block">
+					<a
+						id="feat"
+						href="#"
+						class="text-mediumGray hover:text-almostBlack font-bold"
+					>
+						Features
+						<div class="z-50 inline-block absolute">
+							<img
+								src="images/icon-arrow-down.svg"
+								alt="arrow down"
+								class="inline-block down-feature"
+							/>
+						</div>
+						<div class="inline-block absolute">
+							<img
+								src="images/icon-arrow-up.svg"
+								alt="arrow up"
+								class="hidden up-feature"
+							/>
+						</div>
+					</a>
+
+					<a
+						id="comp"
+						href="#"
+						class="text-mediumGray hover:text-almostBlack font-bold"
+						>Company
+						<div class="z-50 inline-block absolute">
+							<img
+								src="images/icon-arrow-down.svg"
+								alt="arrow down"
+								class="inline-block down-comp"
+							/>
+						</div>
+						<div class="inline-block absolute">
+							<img
+								src="images/icon-arrow-up.svg"
+								alt="arrow up"
+								class="hidden up-comp"
+							/>
+						</div>
+					</a>
+					<a href="#" class="text-mediumGray hover:text-almostBlack font-bold"
+						>Careers
+					</a>
+					<a href="#" class="text-mediumGray hover:text-almostBlack font-bold"
+						>About</a
+					>
+				</div>
+			</div>
+
+			<!-- Menu right -->
+			<div class="space-x-16 hidden lg:block">
+				<a href="#" class="text-mediumGray hover:text-almostBlack font-bold"
+					>Login</a
+				>
+				<a
+					href="#"
+					class="text-mediumGray hover:text-almostBlack py-2 px-3 border border-mediumGray hover:border-almostBlack rounded-lg font-bold"
+					>Register</a
+				>
+			</div>
+
+			<!-- Mobile menu  -->
+			<div id="mob-menu" class="hidden z-10">
+				<div
+					class="-mt-12 flex flex-col pt-12 gap-9 absolute top-12 right-0 lg:hidden bg-almostWhite w-1/2 h-screen"
+				>
+					<div class="feature">
+						<a
+							id="mob-feat"
+							href="#"
+							class="ml-6 relative text-xl text-mediumGray hover:text-almostBlack font-bold"
+							>Features
+						</a>
+
+						<div class="inline-block absolute down-mob-feature ml-1">
+							<img
+								src="images/icon-arrow-down.svg"
+								alt="arrow down"
+								class="inline-block ml-1"
+							/>
+						</div>
+						<div class="hidden absolute up-mob-feature ml-1">
+							<img
+								src="images/icon-arrow-up.svg"
+								alt="arrow up"
+								class="inline-block ml-1"
+							/>
+						</div>
+
+						<!-- mobile dropdown -->
+						<div
+							id="mob-feat-drop"
+							class="hidden px-8 py-2 text-mediumGray rounded-2xl"
+						>
+							<ul>
+								<li class="text-lg leading-10">
+									<img
+										src="images/icon-todo.svg"
+										alt=""
+										class="inline-block mr-2 h-4"
+									/>
+									<a href="#" class="hover:text-almostBlack">Todo List </a>
+								</li>
+								<li class="text-lg leading-10">
+									<img
+										src="images/icon-calendar.svg"
+										alt=""
+										class="inline-block mr-2 h-4"
+									/>
+									<a href="#" class="hover:text-almostBlack">Calendar </a>
+								</li>
+								<li class="text-lg leading-10">
+									<img
+										src="images/icon-reminders.svg"
+										alt=""
+										class="inline-block mr-2 h-4"
+									/>
+									<a href="#" class="hover:text-almostBlack"> Reminders </a>
+								</li>
+								<li class="text-lg leading-10">
+									<img
+										src="images/icon-planning.svg"
+										alt=""
+										class="inline-block mr-2 h-4"
+									/>
+									<a href="#" class="hover:text-almostBlack">Planning </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="company">
+						<a
+							id="mob-comp"
+							href="#"
+							class="ml-6 text-xl text-mediumGray hover:text-almostBlack font-bold"
+							>Company
+						</a>
+						<div class="inline-block absolute down-mob-comp ml-1">
+							<img
+								src="images/icon-arrow-down.svg"
+								alt="arrow down"
+								class="inline-block ml-1"
+							/>
+						</div>
+						<div class="hidden absolute up-mob-comp ml-1">
+							<img
+								src="images/icon-arrow-up.svg"
+								alt="arrow up"
+								class="inline-block ml-1"
+							/>
+						</div>
+
+						<!-- Mobile dropdown -->
+						<div
+							id="mob-comp-drop"
+							class="hidden leading-8 px-8 py-4 text-mediumGray"
+						>
+							<ul>
+								<li class="">
+									<a href="#" class="hover:text-almostBlack">History </a>
+								</li>
+								<li class="">
+									<a href="#" class="hover:text-almostBlack">Our team </a>
+								</li>
+								<li class="">
+									<a href="#" class="hover:text-almostBlack"> Blogs</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<a
+						href="#"
+						class="ml-6 text-xl text-mediumGray hover:text-almostBlack font-bold"
+						>Careers
+					</a>
+					<a
+						href="#"
+						class="ml-6 text-xl text-mediumGray hover:text-almostBlack font-bold"
+						>About</a
+					>
+					<div class="flex flex-col gap-4 items-center">
+						<a
+							href="#"
+							class="text-xl text-mediumGray hover:text-almostBlack font-bold"
+							>Login</a
+						>
+						<a
+							href="#"
+							class="text-xl flex justify-center text-mediumGray hover:text-almostBlack py-2 w-4/5 border border-mediumGray hover:border-almostBlack rounded-lg font-bold"
+						>
+							<span>Register</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Hamburger -->
+			<button
+				id="menu-btn"
+				class="z-10 hamburger focus:outline-none block lg:hidden"
+			>
+				<span class="hamburger-top"></span>
+				<span class="hamburger-middle"></span>
+				<span class="hamburger-bottom"></span>
+			</button>
+		</nav>
+
+		<main
+			class="-z-30 lg:container mx-auto lg:h-[90vh] flex items-center justify-between gap-8 lg:gap-32 pt-10 lg:py-20 md:container flex-col-reverse lg:flex-row"
+		>
+			<div
+				class="overlay hidden absolute top-0 left-0 w-[100%] h-[100%] backdrop-blur-sm bg-overlay z-0 lg:hidden"
+			></div>
+			<!-- text -->
+			<div class="w-4/5 lg:w-1/2 mx-auto text-center lg:text-left">
+				<h1 class="-z-30 font-extrabold text-7xl mb-12 hidden lg:block">
+					Make <br />
+					remote work
+				</h1>
+				<!-- mobile -->
+				<h1 class="font-extrabold text-4xl mb-4 block lg:hidden">
+					Make remote work
+				</h1>
+
+				<p class="text-mediumGray mb-12">
+					Get your team in sync, no matter your location. Streamline processes,
+					create team rituals, and watch productivity soar.
+				</p>
+				<button
+					class="mb-12 lg:mb-24 py-2 px-4 text-almostWhite bg-almostBlack hover:bg-almostWhite hover:text-almostBlack border border-almostBlack rounded-xl"
+				>
+					Learn More
+				</button>
+				<div class="flex justify-between gap-3">
+					<img src="images/client-databiz.svg" alt="client" class="md:h-6" />
+					<img src="images/client-audiophile.svg" alt="client" class="md:h-8" />
+					<img src="images/client-meet.svg" alt="client" class="md:h-7" />
+					<img src="images/client-maker.svg" alt="client" class="md:h-8" />
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div class="lg:h-4/5 lg:w-1/2 flex items-center justify-center">
+				<img
+					src="images/image-hero-desktop.png"
+					alt="desktop-hero"
+					class="lg:h-[90%] hidden lg:block"
+				/>
+				<img
+					src="images/image-hero-mobile.png"
+					alt="hero mobile"
+					class="lg:hidden"
+				/>
+			</div>
+			<!-- dropdown desktop -->
+			<div
+				id="feat-drop"
+				class="z-50 hidden lg:hidden top-16 left-[6em] absolute px-8 py-4 text-mediumGray shadow-lg bg-almostWhite drop-shadow-lg shadow-mediumGray rounded-2xl"
+			>
+				<ul>
+					<li class="text-xl leading-10">
+						<img
+							src="images/icon-todo.svg"
+							alt=""
+							class="inline-block mr-2 h-5"
+						/>
+						<a href="#" class="hover:text-almostBlack">Todo List </a>
+					</li>
+					<li class="text-xl leading-10">
+						<img
+							src="images/icon-calendar.svg"
+							alt=""
+							class="inline-block mr-2 h-5"
+						/>
+						<a href="#" class="hover:text-almostBlack">Calendar </a>
+					</li>
+					<li class="text-xl leading-10">
+						<img
+							src="images/icon-reminders.svg"
+							alt=""
+							class="inline-block mr-2 h-5"
+						/>
+						<a href="#" class="hover:text-almostBlack"> Reminders </a>
+					</li>
+					<li class="text-xl leading-10">
+						<img
+							src="images/icon-planning.svg"
+							alt=""
+							class="inline-block mr-2 h-5"
+						/>
+						<a href="#" class="hover:text-almostBlack">Planning </a>
+					</li>
+				</ul>
+			</div>
+
+			<div
+				id="comp-drop"
+				class="hidden lg:hidden leading-8 absolute top-16 left-[22em] px-8 py-6 text-mediumGray bg-almostWhite shadow-lg drop-shadow-lg shadow-mediumGray rounded-2xl"
+			>
+				<ul>
+					<li class="">
+						<a href="#" class="hover:text-almostBlack">History </a>
+					</li>
+					<li class="">
+						<a href="#" class="hover:text-almostBlack">Our team </a>
+					</li>
+					<li class="">
+						<a href="#" class="hover:text-almostBlack"> Blogs</a>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<!-- Features
+ 
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more
+   -->
+		<script src="script.js"></script>
+	</body>
+</html>
