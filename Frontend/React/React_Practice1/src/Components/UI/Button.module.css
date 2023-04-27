@@ -1,0 +1,14 @@
+.button {
+	background: rgb(66, 8, 66);
+	color: white;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 10px 16px;
+	border: solid 2px rgb(66, 8, 66);
+	border-radius: 10px;
+}
+
+.button:hover,
+.button:active {
+	background-color: rgb(90, 23, 90);
+}

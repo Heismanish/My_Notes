@@ -1,0 +1,127 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin-top: 100px;
+	background-color: teal;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 100px;
+}
+.t-box {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	transition-property: background-color, border-radius, transform;
+	/* transition: all 0.3s 0.2s; */
+	transition-duration: 0.8s;
+}
+
+.t-box:hover {
+	background-color: turquoise;
+	border-radius: 50%;
+	transform: rotate(180deg);
+}
+
+.container {
+	width: 300px;
+	height: 300px;
+	border: 2px solid white;
+	border-radius: 50%;
+	animation: orbit 4s linear infinite;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	/* animation-name: orbit; */
+	animation-duration: 3s;
+
+	/* animation starts after 2s */
+	/* animation-delay: 2s; */
+
+	/* will keep runnig till you remove the animation */
+	/* animation-iteration-count: infinite; */
+
+	/* animation works in reverse/alternate(straight then reverse) order */
+	animation-direction: normal;
+
+	animation-timing-function: linear;
+
+	/* TO specify a style fot the target element when the animation is not playing */
+	animation-fill-mode: forwards;
+
+	border-radius: 50%;
+	/* transition: 1s ease; */
+}
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: beige;
+	animation: up-down 0.8s ease infinite alternate;
+}
+.dot:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.dot:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.dot:nth-child(4) {
+	animation-delay: 0.3s;
+}
+@keyframes up-down {
+	from {
+		transform: translateY(-10px);
+	}
+	to {
+		transform: translateY(10px);
+	}
+}
+
+@keyframes orbit {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translate(-400px);
+	}
+	100% {
+		transform: translate(200px);
+	}
+}
+
+@keyframes circles {
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(200px, 0);
+	}
+	50% {
+		transform: translate(200px, 200px);
+	}
+	75% {
+		transform: translate(0, 200px);
+	}
+}
